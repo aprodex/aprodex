@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -62,7 +63,7 @@ function showLocalTime(container, servermode, offsetMinutes, displayversion){
 if (!document.getElementById || !document.getElementById(container)) return
 this.container=document.getElementById(container)
 this.displayversion=displayversion
-var servertimestring=(servermode=="server-php")? 'August 23, 2022 17:17:18' : (servermode=="server-ssi")? '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' : '<%= Now() %>'
+var servertimestring=(servermode=="server-php")? 'August 23, 2022 17:18:36' : (servermode=="server-ssi")? '<!--#config timefmt="%B %d, %Y %H:%M:%S"--><!--#echo var="DATE_LOCAL" -->' : '<%= Now() %>'
 this.localtime=this.serverdate=new Date(servertimestring)
 this.localtime.setTime(this.serverdate.getTime()+offsetMinutes*60*1000) //add user offset to server time
 this.updateTime()
